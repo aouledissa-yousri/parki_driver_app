@@ -1,0 +1,7 @@
+{
+  "name": "parki_agent_app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
