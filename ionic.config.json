@@ -1,0 +1,7 @@
+{
+  "name": "parki_driver_app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
