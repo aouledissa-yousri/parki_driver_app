@@ -1,0 +1,148 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      SignUp
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg-color">
+
+    <ion-card class="ion-no-margin">
+
+        <ion-card-header>
+            <ion-card-title>
+              Sign Up
+            </ion-card-title>
+            <ion-card-subtitle>
+              Create Your account by filling up the form
+              </ion-card-subtitle>
+        </ion-card-header>
+             <form [formGroup]="ValidationFormAgent" (ngSubmit)="registerUser()">
+       <ion-card-content>
+           <ion-item>
+               <ion-input type="text" placeholder="Name" formControlName="name">
+                <ion-icon name="people-circle-outline"></ion-icon>
+               </ion-input>
+           </ion-item>
+              <div>
+                <ng-container *ngFor="let validation of validationMessages.name">
+
+                  <div class="error_message" *ngIf="ValidationFormAgent.get('name').hasError(validation.type) && (ValidationFormAgent.get('name').dirty || ValidationFormAgent.get('name').touched)">
+                      {{validation.message}}
+                  </div>
+
+                 </ng-container>
+
+              </div>
+              <ion-item>
+                <ion-input  type="text" placeholder="LastName" formControlName="lastname">
+                  <ion-icon name="person-outline"  ></ion-icon>
+                </ion-input>
+            </ion-item>
+               <div>
+                 <ng-container *ngFor="let validation of validationMessages.lastname">
+ 
+                   <div class="error_message" *ngIf="ValidationFormAgent.get('lastname').hasError(validation.type) && (ValidationFormAgent.get('lastname').dirty || ValidationFormAgent.get('lastname').touched)">
+                       {{validation.message}}
+                   </div>
+ 
+                  </ng-container>
+ 
+               </div>
+               <ion-item>
+                <ion-input  type="text" placeholder="Username" formControlName="username">
+                  <ion-icon name="person-circle-outline"></ion-icon>
+                </ion-input>
+            </ion-item>
+               <div>
+                 <ng-container *ngFor="let validation of validationMessages.username">
+ 
+                   <div class="error_message" *ngIf="ValidationFormAgent.get('username').hasError(validation.type) && (ValidationFormAgent.get('username').dirty || ValidationFormAgent.get('username').touched)">
+                       {{validation.message}}
+                   </div>
+ 
+                  </ng-container>
+ 
+               </div>
+           <ion-item>
+               <ion-input  type="text" placeholder="Phone No." formControlName="phone">
+                 <ion-icon name="call-outline" ></ion-icon>
+               </ion-input>
+           </ion-item>
+           <div>
+             <ng-container *ngFor="let validation of validationMessages.phone">
+
+               <div class="error_message" *ngIf="ValidationFormAgent.get('phone').hasError(validation.type) && (ValidationFormAgent.get('phone').dirty || ValidationFormAgent.get('phone').touched)">
+                   {{validation.message}}
+               </div>
+
+              </ng-container>
+
+           </div>
+           <ion-item>
+            <ion-input  type="text" placeholder="WorkAdress" formControlName="workadresse">
+              <ion-icon name="home-outline"></ion-icon>
+            </ion-input>
+        </ion-item>
+           <div>
+             <ng-container *ngFor="let validation of validationMessages.workadresse">
+
+               <div class="error_message" *ngIf="ValidationFormAgent.get('workadresse').hasError(validation.type) && (ValidationFormAgent.get('workadresse').dirty || ValidationFormAgent.get('workadresse').touched)">
+                   {{validation.message}}
+               </div>
+
+              </ng-container>
+
+           </div>
+           <ion-item>
+               <ion-input type="text" placeholder="Email" formControlName="email">
+                 <ion-icon name="mail-outline" ></ion-icon>
+               </ion-input>
+           </ion-item>
+           <ng-container *ngFor="let validation of validationMessages.email">
+
+             <div class="error_message" *ngIf="ValidationFormAgent.get('email').hasError(validation.type) && (ValidationFormAgent.get('email').dirty || ValidationFormAgent.get('email').touched)">
+                 {{validation.message}}
+             </div>
+
+            </ng-container>
+           <ion-item>
+               <ion-input type="password" placeholder="************" formControlName="password">
+                 <ion-icon name="lock-closed" ></ion-icon>
+               </ion-input>
+           </ion-item>
+           <ng-container *ngFor="let validation of validationMessages.password">
+
+             <div class="error_message" *ngIf="ValidationFormAgent.get('password').hasError(validation.type) && (ValidationFormAgent.get('password').dirty || ValidationFormAgent.get('password').touched)">
+                 {{validation.message}}
+             </div>
+
+            </ng-container>
+
+           <div class="sign-btn-wrap">
+              <ion-button  shape="round" type="submit"  fill="solid" class="sign-btn" [disabled]="!ValidationFormAgent.valid">Sign Up</ion-button>
+             </div>
+
+             <div class="text-tag">
+             <span>Sign Up with</span>
+             </div>
+
+             <div class="social-btns">
+                 <ion-button fill="clear"  class="facebookbtn ion-no-padding">
+               <ion-img src="assets/images/facebook.png"></ion-img>
+                 </ion-button>
+                 <ion-button fill="clear"  class="googlebtn ion-no-padding">
+               <ion-img src="assets/images/google.png"></ion-img>
+                 </ion-button>
+                 <ion-button fill="clear"  class="applebtn ion-no-padding">
+               <ion-img src="assets/images/apple.png"></ion-img>
+                 </ion-button>
+
+               </div>
+
+       </ion-card-content>
+        </form>
+    </ion-card>
+
+</ion-content>
