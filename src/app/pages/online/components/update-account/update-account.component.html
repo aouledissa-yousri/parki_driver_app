@@ -1,0 +1,40 @@
+
+<form [formGroup] = "form">
+  <h1>Update account</h1>
+
+  <ion-item>
+    <ion-label position = "floating">New Name</ion-label>
+    <ion-input type = "text"placeholder="Enter your name" formControlName = "name" [value] = "driver.name"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position = "floating">New Last name</ion-label>
+    <ion-input type = "text" placeholder="Enter your Last name" formControlName = "lastname" [value] = "driver.lastname"></ion-input>
+    
+  </ion-item>
+
+  <ion-item>
+    <ion-label position = "floating">New Username</ion-label>
+    <ion-input type = "text" placeholder="Enter your username" formControlName = "username" [value] = "driver.username"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position = "floating">New Email</ion-label>
+    <ion-input type = "text" placeholder="Enter your email" formControlName = "email" [value] = "driver.email"></ion-input>
+
+  </ion-item>
+
+  <ion-item>
+    <ion-label position = "floating">New Phone number</ion-label>
+    <ion-input type = "number" placeholder="Enter your phone number" formControlName = "phoneNumber" [value] = "driver.phoneNumber"></ion-input>
+
+  </ion-item>
+
+  <ion-item>
+    <ion-label position = "floating">New Password</ion-label>
+    <ion-input type = "password" placeholder="Enter your name" formControlName = "password" [value] = "driver.password"></ion-input>
+
+  </ion-item>
+
+  <ion-button expand = "block" type = "submit" [disabled] = "form.invalid" (click) = "updateAccount()">update Account</ion-button>
+</form>

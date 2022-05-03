@@ -14,6 +14,7 @@ import { LoginComponent } from './pages/offline/components/login/login.component
 import { SignUpComponent } from './pages/offline/components/sign-up/sign-up.component';
 import { HomeComponent } from './pages/online/components/home/home.component';
 import { LoadingComponent } from './common-components/loading/loading.component';
+import { UpdateAccountComponent } from './pages/online/components/update-account/update-account.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { LoadingComponent } from './common-components/loading/loading.component'
     LoginComponent,
     SignUpComponent,
     HomeComponent,
-    LoadingComponent
+    LoadingComponent,
+    UpdateAccountComponent
   ],
   entryComponents: [],
   imports: [

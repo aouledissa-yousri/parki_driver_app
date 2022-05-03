@@ -4,6 +4,7 @@ import { LandingComponent } from './pages/offline/components/landing/landing.com
 import { LoginComponent } from './pages/offline/components/login/login.component';
 import { SignUpComponent } from './pages/offline/components/sign-up/sign-up.component';
 import { HomeComponent } from './pages/online/components/home/home.component';
+import { UpdateAccountComponent } from './pages/online/components/update-account/update-account.component';
 
 const routes: Routes = [
   {path: "",  children: [
@@ -13,7 +14,8 @@ const routes: Routes = [
   ]},
 
   {path: "main", children: [
-    {path: "", component: HomeComponent}
+    {path: "", component: HomeComponent},
+    {path: "update_account", component: UpdateAccountComponent}
   ]}
 ];
 @NgModule({
