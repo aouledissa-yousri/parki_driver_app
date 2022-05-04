@@ -1,0 +1,103 @@
+.flex {
+    display: flex;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    height: 85%;
+    transform: translate(-78px, 0px);
+    width: 500px;
+}
+
+h3 {
+    color: white;
+}
+
+c {
+    background-color: white;
+}
+
+.c1 {
+    display: flex;
+    justify-content: center;
+}
+
+ion-button[color="dark"] {
+    text-transform: initial;
+    --background: var(--ion-color-primary);
+}
+
+ion-content {
+    --background: var(--ion-color-primary);
+}
+
+ion-card {
+    border-radius: 2.5%;
+    background-color: white;
+}
+
+.title {
+    height: 2%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.title>h1 {
+    font-size: 50px;
+    margin-top: 50px;
+}
+
+.item {
+    color: grey;
+    background-color: white;
+}
+
+i {
+    color: black;
+    font-style: initial;
+    font-size: 10px;
+}
+
+ion-button[color="dark"]:hover {
+    --background: var(--ion-color-primary);
+}
+
+.input {
+    color: grey
+}
+
+.flex1 {
+    display: flex;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    height: 1%;
+    transform: translate(0px, -90px);
+}
+
+.all {
+    --background: var(--ion-color-primary);
+}
+
+.f {
+    margin-bottom: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+list {
+    background-color: white;
+}
+
+.img {
+    width: 25px;
+}
+
+.flex2 {
+    display: flex;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    height: 1%;
+    transform: translate(0px, -40px);
+}

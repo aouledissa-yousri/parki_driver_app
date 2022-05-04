@@ -1,0 +1,45 @@
+<ion-content color="primary">
+    <div class="title">
+        <h1>Parki</h1>
+    </div>
+
+    <div class="flex">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <ion-card>
+
+
+            <ion-card-content>
+                <ion-list class="item">
+                    <form [formGroup]="form">
+                        <div class="input">
+                            <ion-item color="dark">
+                                <ion-label position="floating">Username</ion-label>
+                                <ion-input class="input" type="text" formControlName="user"></ion-input>
+                            </ion-item>
+                            <ion-item color="dark">
+                                <ion-label position="floating">Password</ion-label>
+                                <ion-input class="input" type="password" formControlName="password"></ion-input>
+                            </ion-item>
+                        </div>
+                    </form>
+                </ion-list>
+                <!--<ion-button color="dark" fill="clear" size="full" (click)="login()"><i>Forget Email/Password</i></ion-button>-->
+                <ion-button color="primary" size="full" shape="round">Log In</ion-button>
+
+                <ion-button color="primary" size="full" shape="round" fill="clear" routerLink="/register">Register</ion-button>
+            </ion-card-content>
+        </ion-card>
+
+    </div>
+    <!--
+<div class="flex1">
+  <ion-card style="border-radius: 2.5%;">
+      <ion-button color="danger" fill="clear">&nbsp;&nbsp;&nbsp;<img class="img" src="../../assets/icon/g-icon.png" />&nbsp;&nbsp;Connect with Google</ion-button>
+  </ion-card>
+</div>
+<div class="flex2">
+  <ion-card style="border-radius: 2.5%;">
+      <ion-button color="primary" fill="clear"><img class="img" src="../../assets/icon/logo-f.jpg" />&nbsp;Connect with Facebook</ion-button>
+  </ion-card>
+</div>-->
+</ion-content>
