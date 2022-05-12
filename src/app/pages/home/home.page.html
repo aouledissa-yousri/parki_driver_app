@@ -1,0 +1,26 @@
+<ion-app>
+  <ion-header translucent>
+    <ion-toolbar>
+      <ion-title>Tableau de bord</ion-title>
+    </ion-toolbar> </ion-header>
+  <ion-content fullscreen>
+    <ion-card>
+      <img src="assets/images/user.png" />
+      <ion-card-header>
+        <ion-card-subtitle>Description</ion-card-subtitle>
+        <ion-card-title>Bienvenue {{username}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content> 
+        Prenez votre temps en remplissant ces informations, Vous pouvez ajouter plus qu'une seule voiture 
+      </ion-card-content>
+    </ion-card>
+    <section class="full-width">
+      <header>Full Width</header>
+      <!-- <ion-item>
+        <ion-checkbox color="primary" [(ngModel)]="changer" slot="start"></ion-checkbox>
+        <ion-label class="check" name="changer"  >Modifier vos informations </ion-label>
+      </ion-item> -->
+      <ion-button expand="full" (click)="onCommence()" color="secondary">Commencer</ion-button>
+    </section>
+  </ion-content>
+</ion-app>

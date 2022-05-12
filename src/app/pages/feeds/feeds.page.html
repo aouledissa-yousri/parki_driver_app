@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Historique</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item *ngFor="let e of agents">
+    <ion-label>
+      {{e.name}}
+    </ion-label>
+    <ion-label>
+      {{e.lastname}}
+    </ion-label>
+  </ion-item>
+</ion-content>

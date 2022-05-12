@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormGroup, FormBuilder, Validators, FormControl} from '@angular/forms'
 import { Router } from '@angular/router';
+import { NavController } from '@ionic/angular';
 import { ApiService } from 'src/app/services/api.service';
 
 @Component({
@@ -28,7 +29,7 @@ export class SignupPage implements OnInit {
 
  
 
-constructor(private router: Router,private crud:ApiService,private formbuilder:FormBuilder,private api:ApiService){
+constructor(private router: Router,private nav: NavController,private crud:ApiService,private formbuilder:FormBuilder,private api:ApiService){
  }
  ValidationFormAgent : FormGroup
 ngOnInit() {
@@ -37,7 +38,7 @@ this.ValidationFormAgent = this.formbuilder.group({
      Validators.required
   ])),
 
-  workadresse: new FormControl('', Validators.compose([
+  workadresse: new FormControl('', Validators.compose([ 
     Validators.required
  ])),
 
@@ -69,6 +70,7 @@ this.ValidationFormAgent = this.formbuilder.group({
 registerUser(){
   this.crud.addAgent(this.ValidationFormAgent.value)
   .subscribe(data => console.log("data"+data));
+  this.nav.navigateForward(['login']);
 }
 
 

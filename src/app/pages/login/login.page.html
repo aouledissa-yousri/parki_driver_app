@@ -1,0 +1,58 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <!-- <ion-title>loginscreen</ion-title> -->
+  </ion-toolbar>
+  <ion-buttons slot="start">
+  <ion-back-button defaulthref="login" text=""></ion-back-button>
+  </ion-buttons>
+</ion-header>
+
+<ion-content>
+    <ion-card class="ion-no-margin">
+      <ion-img src="assets/images/header1.png"></ion-img>
+      <ion-card-content>
+
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+      <ion-item>
+        <ion-label position = "floating">Email or Username</ion-label>
+        <ion-input type = "text"placeholder="Enter your Email or Username" formControlName = "user"></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label position = "floating">Password</ion-label>
+        <ion-input type = "password" placeholder="Enter your password" formControlName = "password"></ion-input>
+      </ion-item>
+      <div *ngIf="loginerror" class="alert alert-danger" role="alert">
+        Username ou mot de pasee invalide !!!
+      </div>
+      <ion-button expand = "block" type = "submit" [disabled] = "loginForm.invalid" (click) = "login()">Login</ion-button>
+
+           <div class="social-btns">
+               <ion-button fill="clear"  class="facebookbtn ion-no-padding">
+             <ion-img src="assets/images/facebook.png"></ion-img>
+               </ion-button>
+               <ion-button fill="clear"  class="googlebtn ion-no-padding">
+             <ion-img src="assets/images/google.png"></ion-img>
+               </ion-button>
+               <ion-button fill="clear"  class="applebtn ion-no-padding">
+             <ion-img src="assets/images/apple.png"></ion-img>
+               </ion-button>
+
+             </div>
+
+
+
+      </form>
+      </ion-card-content>
+
+
+    </ion-card>
+
+
+    <div class="ion-card-footer">
+     <span>Don’t have an account?</span><button (click)="goToSignUp()" class="ion-no-padding" >Sign Up</button>
+      </div>
+
+
+
+</ion-content>
