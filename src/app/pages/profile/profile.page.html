@@ -1,82 +1,30 @@
-<!DOCTYPE html>
-<ion-header class="ion-no-border" >
-  <ion-toolbar>
-    <ion-title>Profile</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+  <div class="main_content_div">
+    <ion-buttons slot="start" class="menu_btn" >
+      <ion-menu-button color="danger" ></ion-menu-button>
+    </ion-buttons> 
 
-  <div class="container">
-   <div class="overylay">
-    <ion-avatar>
-      <img src="../../../assets/images/user.png">
-      <!-- <ion-img [src]="profileImageUrl"></ion-img> -->
-    </ion-avatar>
-   </div>
+    <div class="user_div" >
+      <div class="first_div">
+        <ion-label class="username">Admin</ion-label>
+      </div>
+      <div class="user_back" [style.backgroundImage]="'url(assets/images/user.png)'" ></div>
+    </div>
+
+    <div class="content_div">
+      <div class="test_details">
+        <ion-grid fixed >
+          <ion-row>
+            <ion-col size="6" >
+              <div class="flex_div">
+                <div class="round_div">
+                  <!-- <img src="../../../assets/parki.png" alt="">d9i9a 17:12 -->
+                </div>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </div>
   </div>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>
-        <!-- {{profileName}} -->
-      </ion-card-title>
-      <ion-card-subtitle>
-        Location
-      </ion-card-subtitle>
-    </ion-card-header>
-
-    <ion-card-content>
-      <form [formGroup]="UpdateForm" (ngSubmit)="onModifier()">
-        <ion-card-content>
-          
-          <ion-item lines="none">
-            <ion-input name="nomCompletU" type="text" placeholder="Nom complet" formControlName="nomCompletU" >
-              <ion-icon name="person-outline"  ></ion-icon>
-            </ion-input>
-          </ion-item> 
-          <ion-item lines="none">
-            <ion-input name="Email" type="text" placeholder="Email" formControlName="Email" >
-              <ion-icon name="at-outline"></ion-icon>
-            </ion-input>
-          </ion-item>
-          <ion-item lines="none">
-            <ion-input name="Telephone" type="text" placeholder="Telepone" formControlName="Telephone" >
-              <ion-icon name="call-outline" ></ion-icon>
-            </ion-input>
-          </ion-item>
-          <ion-item lines="none">
-            <ion-input name="Adresse" type="text" placeholder="Adresse" formControlName="Adresse" >
-              <ion-icon name="home-outline"></ion-icon>
-            </ion-input>
-          </ion-item>
-          <ion-item>
-          <ion-input name="Region" type="text" placeholder="Region" formControlName="Region" >
-            <ion-icon name="business-outline"></ion-icon>
-          </ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-input name="Postale" type="text" placeholder="Code Postale" formControlName="Postale" >
-            <ion-icon name="mail-outline"></ion-icon>
-          </ion-input>
-        </ion-item>
-        <ion-label>Votre mot de passe</ion-label> 
-        <ion-item>
-          <ion-input name="password" type="password" placeholder="************" formControlName="password" >
-            <ion-icon name="lock-closed" ></ion-icon>
-          </ion-input>
-      </ion-item>
-      <ion-label>Nouveau mot de passe</ion-label>
-      <ion-item>
-        <ion-input name="password" type="password" placeholder="************">
-          <ion-icon name="lock-closed" ></ion-icon>
-        </ion-input>
-    </ion-item>
-    <ion-button type="submit" >Valider changements</ion-button>
-    <ion-button color="danger" (click)="onQuitter()" >Quitter</ion-button>
-    
-  
-        </ion-card-content>
-      </form>
-    </ion-card-content>
-  </ion-card>
 </ion-content>

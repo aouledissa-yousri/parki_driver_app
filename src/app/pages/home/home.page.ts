@@ -16,6 +16,9 @@ export class HomePage implements OnInit {
   username:string = this.crud.nomUser;
   changer:boolean ;
   // ch:string = this.service.nomUser;
+  slidesOptions = {
+    slidesPerView: 1.5
+  }
   onCommence(){
 
     if (this.changer) {

@@ -1,0 +1,31 @@
+$center: translate(-50%, -50%);
+.loader,
+.center,
+.image-center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: $center;
+}
+
+.image-center {
+    top: 52%;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.logo {
+    animation: fade 3s linear infinite;
+}
+
+.spinner {
+    margin-left: 45%;
+    margin-top: 145%;
+}

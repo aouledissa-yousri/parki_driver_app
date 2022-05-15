@@ -18,7 +18,7 @@
               Create Your account by filling up the form
               </ion-card-subtitle>
         </ion-card-header>
-             <form [formGroup]="ValidationFormAgent" (ngSubmit)="registerUser()">
+             <form [formGroup]="ValidationFormDriver" (ngSubmit)="registerUser()">
        <ion-card-content>
            <ion-item>
                <ion-input type="text" placeholder="Name" formControlName="name">
@@ -28,7 +28,7 @@
               <div>
                 <ng-container *ngFor="let validation of validationMessages.name">
 
-                  <div class="error_message" *ngIf="ValidationFormAgent.get('name').hasError(validation.type) && (ValidationFormAgent.get('name').dirty || ValidationFormAgent.get('name').touched)">
+                  <div class="error_message" *ngIf="ValidationFormDriver.get('name').hasError(validation.type) && (ValidationFormDriver.get('name').dirty || ValidationFormDriver.get('name').touched)">
                       {{validation.message}}
                   </div>
 
@@ -43,7 +43,7 @@
                <div>
                  <ng-container *ngFor="let validation of validationMessages.lastname">
  
-                   <div class="error_message" *ngIf="ValidationFormAgent.get('lastname').hasError(validation.type) && (ValidationFormAgent.get('lastname').dirty || ValidationFormAgent.get('lastname').touched)">
+                   <div class="error_message" *ngIf="ValidationFormDriver.get('lastname').hasError(validation.type) && (ValidationFormDriver.get('lastname').dirty || ValidationFormDriver.get('lastname').touched)">
                        {{validation.message}}
                    </div>
  
@@ -58,7 +58,7 @@
                <div>
                  <ng-container *ngFor="let validation of validationMessages.username">
  
-                   <div class="error_message" *ngIf="ValidationFormAgent.get('username').hasError(validation.type) && (ValidationFormAgent.get('username').dirty || ValidationFormAgent.get('username').touched)">
+                   <div class="error_message" *ngIf="ValidationFormDriver.get('username').hasError(validation.type) && (ValidationFormDriver.get('username').dirty || ValidationFormDriver.get('username').touched)">
                        {{validation.message}}
                    </div>
  
@@ -73,14 +73,14 @@
            <div>
              <ng-container *ngFor="let validation of validationMessages.phone">
 
-               <div class="error_message" *ngIf="ValidationFormAgent.get('phone').hasError(validation.type) && (ValidationFormAgent.get('phone').dirty || ValidationFormAgent.get('phone').touched)">
+               <div class="error_message" *ngIf="ValidationFormDriver.get('phone').hasError(validation.type) && (ValidationFormDriver.get('phone').dirty || ValidationFormDriver.get('phone').touched)">
                    {{validation.message}}
                </div>
 
               </ng-container>
 
            </div>
-           <ion-item>
+           <!-- <ion-item>
             <ion-input  type="text" placeholder="WorkAdress" formControlName="workadresse">
               <ion-icon name="home-outline"></ion-icon>
             </ion-input>
@@ -88,13 +88,13 @@
            <div>
              <ng-container *ngFor="let validation of validationMessages.workadresse">
 
-               <div class="error_message" *ngIf="ValidationFormAgent.get('workadresse').hasError(validation.type) && (ValidationFormAgent.get('workadresse').dirty || ValidationFormAgent.get('workadresse').touched)">
+               <div class="error_message" *ngIf="ValidationFormDriver.get('workadresse').hasError(validation.type) && (ValidationFormDriver.get('workadresse').dirty || ValidationFormDriver.get('workadresse').touched)">
                    {{validation.message}}
                </div>
 
               </ng-container>
 
-           </div>
+           </div> -->
            <ion-item>
                <ion-input type="text" placeholder="Email" formControlName="email">
                  <ion-icon name="mail-outline" ></ion-icon>
@@ -102,7 +102,7 @@
            </ion-item>
            <ng-container *ngFor="let validation of validationMessages.email">
 
-             <div class="error_message" *ngIf="ValidationFormAgent.get('email').hasError(validation.type) && (ValidationFormAgent.get('email').dirty || ValidationFormAgent.get('email').touched)">
+             <div class="error_message" *ngIf="ValidationFormDriver.get('email').hasError(validation.type) && (ValidationFormDriver.get('email').dirty || ValidationFormDriver.get('email').touched)">
                  {{validation.message}}
              </div>
 
@@ -114,14 +114,14 @@
            </ion-item>
            <ng-container *ngFor="let validation of validationMessages.password">
 
-             <div class="error_message" *ngIf="ValidationFormAgent.get('password').hasError(validation.type) && (ValidationFormAgent.get('password').dirty || ValidationFormAgent.get('password').touched)">
+             <div class="error_message" *ngIf="ValidationFormDriver.get('password').hasError(validation.type) && (ValidationFormDriver.get('password').dirty || ValidationFormDriver.get('password').touched)">
                  {{validation.message}}
              </div>
 
             </ng-container>
 
            <div class="sign-btn-wrap">
-              <ion-button  shape="round" type="submit"  fill="solid" class="sign-btn" [disabled]="!ValidationFormAgent.valid">Sign Up</ion-button>
+              <ion-button  shape="round" type="submit"  fill="solid" class="sign-btn" [disabled]="!ValidationFormDriver.valid">Sign Up</ion-button>
              </div>
 
              <div class="text-tag">

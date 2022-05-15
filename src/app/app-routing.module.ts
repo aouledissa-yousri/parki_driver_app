@@ -5,7 +5,7 @@ import { LandingPageModule } from './pages/landing/landing.module';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./pages/landing/landing.module').then( m=>LandingPageModule)
+    loadChildren: () => import('./pages/loading/loading.module').then( m => m.LoadingPageModule)
   },
   {
     path: 'signup',
@@ -18,7 +18,8 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
-  },  {
+  },
+  {
     path: 'home',
     loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
   },
@@ -34,6 +35,11 @@ const routes: Routes = [
     path: 'feeds',
     loadChildren: () => import('./pages/feeds/feeds.module').then( m => m.FeedsPageModule)
   },
+  {
+    path: 'loading',
+    loadChildren: () => import('./pages/loading/loading.module').then( m => m.LoadingPageModule)
+  },
+
 
 
 

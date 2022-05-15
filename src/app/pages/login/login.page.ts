@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NavController } from '@ionic/angular';
-import { Agent } from 'src/app/Eentities/agent';
 import { Credentials } from 'src/app/Entities/credentials';
+import { Driver } from 'src/app/Entities/driver';
 import { ApiService } from 'src/app/services/api.service';
 import { HashService } from 'src/app/services/hash.service';
 
@@ -25,10 +25,10 @@ export class LoginPage implements OnInit {
       password: ["", Validators.required],
     })
 
-    this.crud.getAllAgents()
+    this.crud.getAllDrivers()
     .subscribe( data => this.LesDrivers = data);
   }
-  LesDrivers:Agent []=[];
+  LesDrivers:Driver []=[];
   login(){
     for (let index = 0; index < this.LesDrivers.length+1; index++) {
       // console.log("user"+this.LesUsers[index].email);
@@ -46,9 +46,6 @@ export class LoginPage implements OnInit {
       }
       
     }
-
-
-
     // let credentials = new Credentials(
     //   this.loginForm.value["user"],
     //   this.loginForm.value["user"],

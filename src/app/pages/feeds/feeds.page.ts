@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Agent } from 'src/app/Eentities/agent';
+import { Driver } from 'src/app/Entities/driver';
 import { ApiService } from 'src/app/services/api.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { ApiService } from 'src/app/services/api.service';
 export class FeedsPage implements OnInit {
 // ca c un test mais il faut avoir la liste des transacrion ou les utilisations faites
 //donc il faut creer entity de type transaction et les affichers ici
-  agents:Agent []=[];
+  drivers:Driver []=[];
   
 
   constructor(private service:ApiService) { }
@@ -19,9 +19,9 @@ export class FeedsPage implements OnInit {
   
   
   ngOnInit() {
-    this.service.getAllAgents()
+    this.service.getAllDrivers()
     .subscribe( data => {console.log(data);
-     this.agents = data})
+     this.drivers = data})
     
   
   }

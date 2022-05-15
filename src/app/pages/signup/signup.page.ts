@@ -15,7 +15,6 @@ export class SignupPage implements OnInit {
     name: [{type:"required", message:"Please Enter your Names"}],
     lastname: [{type:"required", message:"Please Enter your LastNames"}],
     username: [{type:"required", message:"Please Enter your Username"}],
-    workadresse: [{type:"required", message:"Please Enter your woekadress"}],
     phone: [{type:"required", message:"Please Enter your Phone No."}],
     email: [
       {type: 'required',message:"Enter your Email Adress"},
@@ -31,16 +30,12 @@ export class SignupPage implements OnInit {
 
 constructor(private router: Router,private nav: NavController,private crud:ApiService,private formbuilder:FormBuilder,private api:ApiService){
  }
- ValidationFormAgent : FormGroup
+ ValidationFormDriver : FormGroup
 ngOnInit() {
-this.ValidationFormAgent = this.formbuilder.group({
+this.ValidationFormDriver = this.formbuilder.group({
   name: new FormControl('', Validators.compose([
      Validators.required
   ])),
-
-  workadresse: new FormControl('', Validators.compose([ 
-    Validators.required
- ])),
 
   lastname: new FormControl('', Validators.compose([
     Validators.required
@@ -68,7 +63,7 @@ this.ValidationFormAgent = this.formbuilder.group({
 }
 
 registerUser(){
-  this.crud.addAgent(this.ValidationFormAgent.value)
+  this.crud.addDriver(this.ValidationFormDriver.value)
   .subscribe(data => console.log("data"+data));
   this.nav.navigateForward(['login']);
 }
